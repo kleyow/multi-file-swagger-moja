@@ -1,0 +1,11 @@
+swagger: '2.0'
+info:
+  $ref: ./v1.0/info/index_swagger2.yaml
+basePath: /fsp
+schemes:
+  - http
+  - https
+definitions:
+  $ref: ./v1.0/definitions/index.yaml
+parameters:
+  $ref: ./v1.0/parameters/index.yaml

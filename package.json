@@ -1,11 +1,12 @@
 {
-  "name": "multi-file-swagger",
-  "version": "2.3.0",
-  "description": "Multi-file Swagger example",
+  "name": "api-snippets",
+  "version": "0.0.1",
+  "description": "Mojaloop API specification reusable snippets",
   "main": "resolve.js",
   "scripts": {
     "start": "node resolve.js",
-    "test": "node resolve.js index.yaml > test/resolved.json && node resolve.js -o yaml index.yaml > test/resolved.yaml && node test/diffCheck.js"
+    "test": "node resolve.js index.yaml > test/resolved.json && node resolve.js -o yaml index.yaml > test/resolved.yaml && node test/diffCheck.js",
+    "buildv1.0": "node resolve.js -o yaml v1.0/index_swagger2.yaml > v1.0/docs/fspiop-rest-v1.0-OpenAPI-snippets.yaml && node resolve.js -o yaml v1.0/index_openapi3.yaml > v1.0/docs/fspiop-rest-v1.0-OpenAPI-snippets_openapi3.yaml"
   },
   "bin": {
     "multi-file-swagger": "resolve.js"
@@ -17,6 +18,7 @@
     "json-refs": "^3.0.12"
   },
   "devDependencies": {
-    "diff": "^4.0.1"
+    "diff": "^4.0.1",
+    "multi-file-swagger": "^2.3.0"
   }
 }
